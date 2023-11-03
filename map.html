@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trailblazer Map</title>
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trailblazer - Explore the Outdoors</h1>
+    <div id="map"></div>
+
+    <script>
+        function initMap() {
+            var location = {lat: 37.7749, lng: -122.4194};  // Sample location: San Francisco
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: location
+            });
+
+            // Add a sample Point of Interest (POI)
+            var poi = new google.maps.Marker({
+                position: {lat: 37.7590, lng: -122.4449}, // Sample POI: Golden Gate Park
+                map: map,
+                title: 'Golden Gate Park'
+            });
+        }
+    </script>
+
+    <script async defer
+
+        src="https://maps.googleapis.com/maps/api/place/details/output?parameters"
+    </script>
+</body>
+</html>
